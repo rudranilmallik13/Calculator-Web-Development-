@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Calculator.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="calculator">
+            <form>
+                <div class="display" id="display">
+
+                </div>
+                <div>
+                    <input type="button"  value="AC" onclick="getElementById('display').innerHTML=''">
+                    <input type="button"  value="DE" onclick="getElementById('display').innerHTML=document.getElementById('display').innerHTML.toString().slice(0,-1)">
+                    <input type="button" class="operator" value="." onclick="getElementById('display').innerHTML+='.'">
+                    <input type="button" class="operator" value="/" onclick="getElementById('display').innerHTML+='/'">
+                </div>
+                <div>
+                    <input type="button"  value="7" onclick="getElementById('display').innerHTML+='7'">
+                    <input type="button"  value="8" onclick="getElementById('display').innerHTML+='8'">
+                    <input type="button"  value="9" onclick="getElementById('display').innerHTML+='9'">
+                    <input type="button" class="operator" value="*" onclick="getElementById('display').innerHTML+='*' ">
+                </div>
+                <div>
+                    <input type="button"  value="4" onclick="getElementById('display').innerHTML+='4'">
+                    <input type="button"  value="5" onclick="getElementById('display').innerHTML+='5'">
+                    <input type="button"  value="6" onclick="getElementById('display').innerHTML+='6'">
+                    <input type="button" class="operator" value="-" onclick="getElementById('display').innerHTML+='-'">
+                </div>
+                <div>
+                    <input type="button"  value="1" onclick="getElementById('display').innerHTML+='1'">
+                    <input type="button"  value="2" onclick="getElementById('display').innerHTML+='2'">
+                    <input type="button"  value="3" onclick="getElementById('display').innerHTML+='3'">
+                    <input type="button" class="operator" value="+" onclick="getElementById('display').innerHTML+='+'">
+                </div>
+                <div>
+                    <input type="button"  value="00" onclick="getElementById('display').innerHTML+='00' ">
+                    <input type="button"  value="0" onclick="getElementById('display').innerHTML+='0'">
+                    <input type="button" id="final" value="=" class="equal" onclick="getElementById('display').innerHTML=eval(document.getElementById('display').innerHTML)">
+                    
+                </div>
+            </form>
+        </div>
+    </div>
+<script src="Calculator.js"></script>
+</body>
+
+</html>
